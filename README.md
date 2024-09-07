@@ -1,3 +1,4 @@
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/biblatex2qmd)](https://pypi.org/project/biblatex2qmd/)
 [![PYPI Version](https://img.shields.io/pypi/v/biblatex2qmd)](https://pypi.org/project/biblatex2qmd/)
 
 # BibLaTeX Processor
