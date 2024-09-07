@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10795822.svg)](https://doi.org/10.5281/zenodo.10795822)
 [![Supported Python Versions](https://img.shields.io/pypi/pyversions/biblatex2qmd)](https://pypi.org/project/biblatex2qmd/)
 [![PYPI Version](https://img.shields.io/pypi/v/biblatex2qmd)](https://pypi.org/project/biblatex2qmd/)
 
