@@ -6,12 +6,7 @@
 
 BibLaTeX2qmd is a Python package that processes BibLaTeX files, extracts information from each entry, creates individual Markdown files for each entry, and generates a combined corpus file.
 
-```mermaid
-graph LR
-    A[<Zotero width='50' height='50' />] -->
-    B[<Better biblatex width='100' height='50' />] -->
-    C[<img src='./static/quarto.png' width='100' height='50' />]
-```
+![image](/biblatex2qmd/static/combined.png)
 
 ## Features
 
