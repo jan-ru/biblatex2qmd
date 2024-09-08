@@ -8,8 +8,8 @@ BibLaTeX2qmd is a Python package that processes BibLaTeX files, extracts informa
 
 ```mermaid
 graph LR
-    A[<img src='./static/zotero.png' width='50' height='50' />] -->
-    B[<img src='./static/biblatex.png' width='100' height='50' />] -->
+    A[<Zotero width='50' height='50' />] -->
+    B[<Better biblatex width='100' height='50' />] -->
     C[<img src='./static/quarto.png' width='100' height='50' />]
 ```
 
