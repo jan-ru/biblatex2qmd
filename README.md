@@ -1,6 +1,10 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10795822.svg)](https://doi.org/10.5281/zenodo.10795822)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/biblatex2qmd)](https://pypi.org/project/biblatex2qmd/)
+[![PYPI Version](https://img.shields.io/pypi/v/biblatex2qmd)](https://pypi.org/project/biblatex2qmd/)
+
 # BibLaTeX Processor
 
-BibLaTeX Processor is a Python package that processes BibLaTeX files, extracts information from each entry, creates individual Markdown files for each entry, and generates a combined corpus file.
+BibLaTeX2qmd is a Python package that processes BibLaTeX files, extracts information from each entry, creates individual Markdown files for each entry, and generates a combined corpus file.
 
 ## Features
 
@@ -15,7 +19,7 @@ BibLaTeX Processor is a Python package that processes BibLaTeX files, extracts i
 You can install BibLaTeX Processor using pip:
 
 ```bash
-pip install biblatex-processor
+pip install biblatex2qmd
 ```
 
 ## Usage

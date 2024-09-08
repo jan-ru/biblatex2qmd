@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Muller
+    given-names: Jan-Ru
+    orcid: https://orcid.org/0000-0002-9655-1135
+title: "BibLateX2qmd"
+version: 0.1.7
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.13731940
+date-released: 2021-08-11
