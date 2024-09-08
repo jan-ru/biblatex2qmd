@@ -13,7 +13,7 @@ from pathlib import Path
 import bibtexparser
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import convert_to_unicode
-import bib_notes_parser
+# import bib_notes_parser
 import ast
 
 def validate_biblatex_file(file_path: str) -> bool:
@@ -24,10 +24,13 @@ def validate_biblatex_file(file_path: str) -> bool:
             bib_database = bibtexparser.load(bibtex_file)
         
         if not bib_database.entries:
-            raise ValueError("The BibLaTeX file contains no valid entries.")
+            print(f"Error: The BibLaTeX file '{file_path}' contains no valid entries.")
+            return False
         return True
     except (bibtexparser.bibdatabase.UndefinedString, Exception) as e:
-        raise ValueError(f"Error validating BibLaTeX file: {str(e)}")
+        print(f"Error validating BibLaTeX file '{file_path}': {str(e)}")
+        return False
+
 
 def setup_directories(output_directory: str) -> Dict[str, Path]:
     dirs = {name: Path(output_directory) / name for name in ['source', 'abstract', 'corpus']}
@@ -36,6 +39,7 @@ def setup_directories(output_directory: str) -> Dict[str, Path]:
             shutil.rmtree(dir_path)
         dir_path.mkdir(parents=True)
     return dirs
+
 
 def extract_biblatex_info(entry: Dict[str, str], fields: List[str]) -> Dict[str, str]:
     info = {}
@@ -61,7 +65,10 @@ def extract_biblatex_info(entry: Dict[str, str], fields: List[str]) -> Dict[str,
     return info
 
 def process_entries(biblatex_file: str, output_directory: str, fields_to_extract: List[str]) -> None:
-    validate_biblatex_file(biblatex_file)
+    if not validate_biblatex_file(biblatex_file):
+        print("Processing terminated due to file validation error.")
+        return
+
     dirs = setup_directories(output_directory)
     shutil.copy2(biblatex_file, dirs['source'])
 
@@ -109,8 +116,17 @@ def process_entries(biblatex_file: str, output_directory: str, fields_to_extract
         print(f"Error creating corpus.md: {e}")
 
         
-if __name__ == "__main__":
+def main():
     input_file = 'bib/SLR_Selection_Papers.bib'
     fields_to_extract = ['author_last_name', 'year', 'title', 'ID', 'abstract', 'keywords', 'note']
     output_directory = './papers'
-    process_entries(input_file, output_directory, fields_to_extract)
+    
+    try:
+        process_entries(input_file, output_directory, fields_to_extract)
+    except Exception as e:
+        print(f"An error occurred during processing: {str(e)}")
+        print("Script execution terminated.")
+
+
+if __name__ == "__main__":
+    main()
