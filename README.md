@@ -62,7 +62,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Thanks to the creators of the `bibtexparser` library, which this project heavily relies on.
+Thanks to:
+
+- the creators of the [`bibtexparser`](https://github.com/sciunto-org/python-bibtexparser) library, which this project heavily relies on.
+
+- [Marcel Bollmann](https://marcel.bollmann.me/blog/) for his blog post. Often indeed what seems straightforward turns out to be way more complicated.
 
 ## Contact
 
